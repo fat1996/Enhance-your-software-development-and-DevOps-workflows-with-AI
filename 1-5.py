@@ -1,5 +1,12 @@
-# example of messy, hard to read code
+# example for role based prompting
+def average(nums):
+    total = 0
+    for n in nums:
+        total = n  # BUG: overwriting instead of accumulating
+    return total / len(nums)
 
+
+# example of messy, hard to read code
 from decimal import Decimal
 
 def compute_total(items, coupon=None, tax_rate=Decimal("0.13")):
